@@ -1,4 +1,4 @@
-package com.mindbowser.entity;
+package com.mindbowser.stripepayment.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import org.springframework.lang.NonNull;
 
 @Entity
 @Table(name = "products")
@@ -16,23 +15,20 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long Id;
 
-	@NonNull
 	@Column(name = "product_name")
 	private String productName;
 
-	@NonNull
 	@Column(name = "product_description")
 	private String productDescription;
 
-	@NonNull
 	@Column(name = "product_price")
-	private int productPrice;
+	private Double productPrice;
 
 	public Product() {
 		super();
 	}
 
-	public Product(Long id, String productName, String productDescription, int productPrice) {
+	public Product(Long id, String productName, String productDescription, Double productPrice) {
 		super();
 		Id = id;
 		this.productName = productName;
@@ -64,11 +60,11 @@ public class Product {
 		this.productDescription = productDescription;
 	}
 
-	public int getProductPrice() {
+	public Double getProductPrice() {
 		return productPrice;
 	}
 
-	public void setProductPrice(int productPrice) {
+	public void setProductPrice(Double productPrice) {
 		this.productPrice = productPrice;
 	}
 
