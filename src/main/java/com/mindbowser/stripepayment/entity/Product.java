@@ -22,13 +22,13 @@ public class Product {
 	private String productDescription;
 
 	@Column(name = "product_price")
-	private Double productPrice;
+	private Long productPrice;
 
 	public Product() {
 		super();
 	}
 
-	public Product(Long id, String productName, String productDescription, Double productPrice) {
+	public Product(Long id, String productName, String productDescription, Long productPrice) {
 		super();
 		Id = id;
 		this.productName = productName;
@@ -60,11 +60,11 @@ public class Product {
 		this.productDescription = productDescription;
 	}
 
-	public Double getProductPrice() {
+	public Long getProductPrice() {
 		return productPrice;
 	}
 
-	public void setProductPrice(Double productPrice) {
+	public void setProductPrice(Long productPrice) {
 		this.productPrice = productPrice;
 	}
 
