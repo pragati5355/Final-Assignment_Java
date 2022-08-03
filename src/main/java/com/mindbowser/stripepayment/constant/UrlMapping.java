@@ -7,4 +7,6 @@ public class UrlMapping {
 	}
 
 	public static final String BASE_URL = "api/v1";
+
+	public static final String WEBHOOK = "/webhook";
 }
