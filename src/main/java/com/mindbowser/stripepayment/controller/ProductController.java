@@ -1,5 +1,6 @@
 package com.mindbowser.stripepayment.controller;
 
+import static com.mindbowser.stripepayment.constant.UrlMapping.BASE_URL;
 import static com.mindbowser.stripepayment.constant.UrlMapping.WEBHOOK;
 import java.util.HashMap;
 import java.util.List;
@@ -25,7 +26,7 @@ import com.stripe.param.checkout.SessionCreateParams;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping({"api/v1/product"})
+@RequestMapping({BASE_URL})
 public class ProductController {
 
 	@Autowired
